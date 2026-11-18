@@ -289,14 +289,29 @@ A：存在被监测和封禁风险，用户应合理切换节点、避免频繁�
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>Shadowrocket 的日志界面怎么看节点状态？</h5></div>
+    <div class="panel-body">
+        Shadowrocket 的日志界面实时显示连接记录与节点响应延迟。绿色代表成功连接，红色代表失败，通过查看错误码可判断是 DNS 问题、TLS 握手失败还是代理超时。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>Sing-box 的分流规则可以按端口分配节点吗？</h5></div>
     <div class="panel-body">
         支持。用户可通过端口号匹配流量，将不同应用的流量分配到指定节点，实现精准分流。结合策略组使用，可优化访问速度和网络稳定性。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash 的策略组支持哪些节点选择策略？</h5></div>
+    <div class="panel-heading"><h5>WinXray 节点延迟检测如何优化访问速度？</h5></div>
     <div class="panel-body">
-        支持按延迟选择、随机选择、轮询或手动选择节点。结合规则匹配，用户可实现不同网站或应用使用不同节点，提高访问速度和网络稳定性，同时降低管理复杂度。<hr />    </div>
+        WinXray 会定期测速节点延迟和丢包率，结合策略组自动切换到最佳节点。保证网页、视频和游戏流量走低延迟节点，提升访问速度和连接稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Shadowsocks 密码泄露后应如何应对？</h5></div>
+    <div class="panel-body">
+        立即更改服务端密码与相应的端口，检查服务器是否存在异常连接或 root 活动，查看日志并封禁可疑 IP。若使用多人共享节点，建议为每个用户单独分配独立端口与密码以降低风险传播。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>PassWall2 如何通过策略组优化科学上网？</h5></div>
+    <div class="panel-body">
+        PassWall2 结合策略组和节点延迟检测功能，可自动选择最佳节点处理网页、视频和游戏流量。无需手动干预，保证访问速度和网络稳定性，提高整体体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Potatso Lite 是否可导入节点二维码？</h5></div>
@@ -309,34 +324,19 @@ A：存在被监测和封禁风险，用户应合理切换节点、避免频繁�
         Shadowrocket 定期测速节点延迟和丢包率，并结合策略组自动切换到最佳节点。保证网页、视频和游戏流量通过最优路径，提高访问速度和连接稳定性。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>PassWall2 如何通过策略组优化科学上网？</h5></div>
-    <div class="panel-body">
-        PassWall2 结合策略组和节点延迟检测功能，可自动选择最佳节点处理网页、视频和游戏流量。无需手动干预，保证访问速度和网络稳定性，提高整体体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Shadowsocks 密码泄露后应如何应对？</h5></div>
-    <div class="panel-body">
-        立即更改服务端密码与相应的端口，检查服务器是否存在异常连接或 root 活动，查看日志并封禁可疑 IP。若使用多人共享节点，建议为每个用户单独分配独立端口与密码以降低风险传播。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash 自动切换节点如何提高网页访问速度？</h5></div>
-    <div class="panel-body">
-        Clash 结合策略组和延迟检测功能，可自动选择延迟低、稳定性高的节点处理网页流量。提高访问速度和稳定性，减少加载时间和浏览卡顿，优化网络体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>VMess AEAD 加密如何保证数据安全？</h5></div>
     <div class="panel-body">
         AEAD 加密防止数据篡改、重放攻击和流量特征泄露。在高封锁环境下使用，可保证节点长期可用，提升数据安全和连接稳定性，同时降低被检测风险。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>WinXray 节点延迟检测如何优化访问速度？</h5></div>
+    <div class="panel-heading"><h5>Clash 的策略组支持哪些节点选择策略？</h5></div>
     <div class="panel-body">
-        WinXray 会定期测速节点延迟和丢包率，结合策略组自动切换到最佳节点。保证网页、视频和游戏流量走低延迟节点，提升访问速度和连接稳定性。<hr />    </div>
+        支持按延迟选择、随机选择、轮询或手动选择节点。结合规则匹配，用户可实现不同网站或应用使用不同节点，提高访问速度和网络稳定性，同时降低管理复杂度。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Shadowrocket 的日志界面怎么看节点状态？</h5></div>
+    <div class="panel-heading"><h5>Clash 自动切换节点如何提高网页访问速度？</h5></div>
     <div class="panel-body">
-        Shadowrocket 的日志界面实时显示连接记录与节点响应延迟。绿色代表成功连接，红色代表失败，通过查看错误码可判断是 DNS 问题、TLS 握手失败还是代理超时。    </div>
+        Clash 结合策略组和延迟检测功能，可自动选择延迟低、稳定性高的节点处理网页流量。提高访问速度和稳定性，减少加载时间和浏览卡顿，优化网络体验。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -384,16 +384,16 @@ A：存在被监测和封禁风险，用户应合理切换节点、避免频繁�
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-10-14-clash-node-daily-updates.htm" title="ClashX Free免费节点 | 10月14日19.7M/S|免费V2ray节点/Shadowrocket节点/Trojan节点/Clash节点/SSR节点/Singbox节点节点推荐">ClashX Free免费节点 | 10月14日19.7M/S|免费V2ray节点/Shadowrocket节点/Trojan节点/Clash节点/SSR节点/Singbox节点节点推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-11-4-clash-meta-github.htm" title="ClashX Free免费节点 | 11月4日20.1M/S|免费Trojan节点/Shadowrocket节点/Singbox节点/SSR节点/V2ray节点/Clash节点节点推荐">ClashX Free免费节点 | 11月4日20.1M/S|免费Trojan节点/Shadowrocket节点/Singbox节点/SSR节点/V2ray节点/Clash节点节点推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/clash-verge-rev-github-2026-10-13.htm" title="ClashX Free免费节点 | 10月13日20.9M/S|免费Clash节点/Trojan节点/V2ray节点/SSR节点/Singbox节点/Shadowrocket节点节点推荐">ClashX Free免费节点 | 10月13日20.9M/S|免费Clash节点/Trojan节点/V2ray节点/SSR节点/Singbox节点/Shadowrocket节点节点推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/clash-node-github-2026-11-11.htm" title="ClashX Free免费节点 | 11月11日18.9M/S|免费V2ray节点/Trojan节点/Singbox节点/SSR节点/Shadowrocket节点/Clash节点节点推荐">ClashX Free免费节点 | 11月11日18.9M/S|免费V2ray节点/Trojan节点/Singbox节点/SSR节点/Shadowrocket节点/Clash节点节点推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/node-share-2026-11-13.htm" title="ClashX Free免费节点 | 11月13日22.5M/S|免费Singbox节点/Clash节点/SSR节点/Shadowrocket节点/Trojan节点/V2ray节点节点推荐">ClashX Free免费节点 | 11月13日22.5M/S|免费Singbox节点/Clash节点/SSR节点/Shadowrocket节点/Trojan节点/V2ray节点节点推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-verge-rev-github-2026-10-31.htm" title="ClashX Free免费节点 | 10月31日22.8M/S|免费SSR节点/Shadowrocket节点/Singbox节点/Clash节点/V2ray节点/Trojan节点节点推荐">ClashX Free免费节点 | 10月31日22.8M/S|免费SSR节点/Shadowrocket节点/Singbox节点/Clash节点/V2ray节点/Trojan节点节点推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-10-24-clash-node.htm" title="ClashX Free免费节点 | 10月24日19.3M/S|免费Singbox节点/Shadowrocket节点/Clash节点/SSR节点/V2ray节点/Trojan节点节点推荐">ClashX Free免费节点 | 10月24日19.3M/S|免费Singbox节点/Shadowrocket节点/Clash节点/SSR节点/V2ray节点/Trojan节点节点推荐</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/clash-node-github-2026-11-7.htm" title="ClashX Free免费节点 | 11月7日22.1M/S|免费SSR节点/Shadowrocket节点/Trojan节点/V2ray节点/Clash节点/Singbox节点节点推荐">ClashX Free免费节点 | 11月7日22.1M/S|免费SSR节点/Shadowrocket节点/Trojan节点/V2ray节点/Clash节点/Singbox节点节点推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-11-6-clash-verge-rev-nodes.htm" title="ClashX Free免费节点 | 11月6日18.8M/S|免费V2ray节点/Clash节点/Singbox节点/Trojan节点/SSR节点/Shadowrocket节点节点推荐">ClashX Free免费节点 | 11月6日18.8M/S|免费V2ray节点/Clash节点/Singbox节点/Trojan节点/SSR节点/Shadowrocket节点节点推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/clash-stash-2026-10-11.htm" title="ClashX Free免费节点 | 10月11日21.8M/S|免费Shadowrocket节点/Trojan节点/V2ray节点/Clash节点/Singbox节点/SSR节点节点推荐">ClashX Free免费节点 | 10月11日21.8M/S|免费Shadowrocket节点/Trojan节点/V2ray节点/Clash节点/Singbox节点/SSR节点节点推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-verge-rev-github-2026-10-13.htm" title="ClashX Free免费节点 | 10月13日20.9M/S|免费Clash节点/Trojan节点/V2ray节点/SSR节点/Singbox节点/Shadowrocket节点节点推荐">ClashX Free免费节点 | 10月13日20.9M/S|免费Clash节点/Trojan节点/V2ray节点/SSR节点/Singbox节点/Shadowrocket节点节点推荐</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-11-8-clash-node.htm" title="ClashX Free免费节点 | 11月8日20.7M/S|免费Clash节点/Shadowrocket节点/V2ray节点/SSR节点/Trojan节点/Singbox节点节点推荐">ClashX Free免费节点 | 11月8日20.7M/S|免费Clash节点/Shadowrocket节点/V2ray节点/SSR节点/Trojan节点/Singbox节点节点推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-11-12-clash-verge-rev-node-github.htm" title="ClashX Free免费节点 | 11月12日21.1M/S|免费SSR节点/Clash节点/Trojan节点/Shadowrocket节点/V2ray节点/Singbox节点节点推荐">ClashX Free免费节点 | 11月12日21.1M/S|免费SSR节点/Clash节点/Trojan节点/Shadowrocket节点/V2ray节点/Singbox节点节点推荐</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-10-28-clash-verge-rev-node-github.htm" title="ClashX Free免费节点 | 10月28日22.4M/S|免费Shadowrocket节点/Singbox节点/SSR节点/Clash节点/Trojan节点/V2ray节点节点推荐">ClashX Free免费节点 | 10月28日22.4M/S|免费Shadowrocket节点/Singbox节点/SSR节点/Clash节点/Trojan节点/V2ray节点节点推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/clash-verge-rev-windows-2026-11-5.htm" title="ClashX Free免费节点 | 11月5日18.9M/S|免费Shadowrocket节点/V2ray节点/Trojan节点/Clash节点/Singbox节点/SSR节点节点推荐">ClashX Free免费节点 | 11月5日18.9M/S|免费Shadowrocket节点/V2ray节点/Trojan节点/Clash节点/Singbox节点/SSR节点节点推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-node-github-2026-11-11.htm" title="ClashX Free免费节点 | 11月11日18.9M/S|免费V2ray节点/Trojan节点/Singbox节点/SSR节点/Shadowrocket节点/Clash节点节点推荐">ClashX Free免费节点 | 11月11日18.9M/S|免费V2ray节点/Trojan节点/Singbox节点/SSR节点/Shadowrocket节点/Clash节点节点推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-verge-rev-windows-2026-11-3.htm" title="ClashX Free免费节点 | 11月3日21.7M/S|免费Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Singbox节点/Trojan节点节点推荐">ClashX Free免费节点 | 11月3日21.7M/S|免费Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Singbox节点/Trojan节点节点推荐</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -405,7 +405,7 @@ A：存在被监测和封禁风险，用户应合理切换节点、避免频繁�
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">11</span> <a href="/date/2026-11/" title="2026-11 归档">2026-11</a></h4>
+                <h4><span class="badge" style="float: right;">18</span> <a href="/date/2026-11/" title="2026-11 归档">2026-11</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">21</span> <a href="/date/2026-10/" title="2026-10 归档">2026-10</a></h4>
